@@ -44,7 +44,7 @@ Si no carga, revisa que el firewall de la computadora permita conexiones entrant
 Inicio de sesión → **Entrar** (sin credenciales) → *Casa*: tocar un canal lo reproduce arriba →
 tocar el video muestra los controles → ⤢ abre el reproductor horizontal con cambio de canal ▲▼ →
 **‹ Canales** regresa al mismo punto de la lista. *Guía*: tocar un programa al aire lo reproduce
-en Casa; un programa futuro muestra su hora de inicio. *Ajustes → Acerca de → Reiniciar demo*
+en Casa; un programa futuro muestra su hora de inicio. *Ajustes → Acerca de → Cerrar sesión*
 vuelve al inicio.
 
 ## Dónde cambiar cada cosa

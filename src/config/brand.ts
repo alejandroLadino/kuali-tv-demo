@@ -46,6 +46,12 @@ export const brand = {
 
   /** Mostrar la pantalla de inicio de sesión al abrir (no valida credenciales). */
   showLogin: true,
+
+  /** Datos que muestra Ajustes → Acerca de (tomados de la app actual). */
+  about: {
+    accountName: 'KD5777-1',
+    version: '2.0.2 20260616.1',
+  },
 }
 
 export type Brand = typeof brand

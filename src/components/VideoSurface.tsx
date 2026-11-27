@@ -62,7 +62,7 @@ export function VideoSurface({ channel, playing, muted, showTag = true }: Props)
             <div className="sim-center">
               <div className="sim-title">{prog.title}</div>
               <div className="sim-sub">
-                {channel.number} · {channel.name}
+                {channel.name}
               </div>
             </div>
             <div className="sim-lower">

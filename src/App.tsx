@@ -170,7 +170,12 @@ export default function App() {
             />
           )}
           {tab === 'ajustes' && (
-            <SettingsScreen page={settingsPage} onOpen={setSettingsPage} onRestart={restart} />
+            <SettingsScreen
+              page={settingsPage}
+              onOpen={setSettingsPage}
+              onRestart={restart}
+              onInfo={showToast}
+            />
           )}
           <TabBar
             tab={tab}

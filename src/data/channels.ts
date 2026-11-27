@@ -1,8 +1,8 @@
 /**
  * Catálogo de canales del demo (datos locales, sin APIs de producción).
  *
- * - Los canales y programas de las 11:00 pm a la 1:00 am provienen de las
- *   capturas de Casa y Guía. Lo que no se veía en ellas es DATO DE MUESTRA.
+ * - Canales y programas son genéricos (Canal N + género) para no usar
+ *   marcas ni títulos reales. Todo es DATO DE MUESTRA.
  * - `logo`: ruta a la imagen original del canal en public/logos/. Mientras
  *   esté vacío se muestra un distintivo provisional con número y nombre.
  * - `video`: video propio de ese canal (opcional). Si no hay, se usa
@@ -31,7 +31,7 @@ export interface Channel {
 }
 
 /** Completa la programación con bloques de 30 min hasta las 3:00 am. */
-function fill(programs: Program[], filler = 'Inova', until = '03:00'): Program[] {
+function fill(programs: Program[], filler = 'Programa pagado', until = '03:00'): Program[] {
   const out = [...programs]
   let last = out[out.length - 1].end
   while (toMin(last) < toMin(until)) {
@@ -56,150 +56,149 @@ function fromMin(min: number): string {
 
 export const channels: Channel[] = [
   {
-    id: 'azteca-uno',
+    id: 'canal-1',
     number: 1,
-    name: 'Azteca Uno',
-    badge: 'AZTECA UNO',
+    name: 'Canal 1 Noticias',
+    badge: 'NOTICIAS',
     color: '#2E7BD6',
     schedule: fill([
-      { title: 'Ventaneando', start: '22:00', end: '23:30' }, // muestra
-      { title: 'Los protagonistas', start: '23:30', end: '00:30' },
-      { title: 'Inova', start: '00:30', end: '01:00' },
+      { title: 'Noticiero estelar', start: '22:00', end: '23:30' },
+      { title: 'Análisis de la noche', start: '23:30', end: '00:30' },
+      { title: 'Resumen informativo', start: '00:30', end: '01:00' },
     ]),
   },
   {
-    id: 'las-estrellas',
+    id: 'canal-2',
     number: 2,
-    name: 'Las Estrellas',
-    badge: 'LAS ESTRELLAS',
-    color: '#7A5AC8',
+    name: 'Canal 2 Deportes',
+    badge: 'DEPORTES',
+    color: '#3A8F5C',
     schedule: fill([
-      { title: 'N+ Noticias', start: '22:00', end: '23:00' }, // muestra
-      { title: 'Tercer grado deportivo', start: '23:00', end: '00:00' },
-      { title: 'Iglesia universal', start: '00:00', end: '00:30' },
-      { title: 'Iglesia universal', start: '00:30', end: '01:00' },
+      { title: 'Fútbol en vivo', start: '22:00', end: '23:00' },
+      { title: 'Zona deportiva', start: '23:00', end: '00:00' },
+      { title: 'Grandes jugadas', start: '00:00', end: '00:30' },
+      { title: 'Grandes jugadas', start: '00:30', end: '01:00' },
     ]),
   },
   {
-    id: 'imagen-tv',
+    id: 'canal-3',
     number: 3,
-    name: 'Imagen Televisión',
-    badge: 'IMAGEN TV',
-    color: '#D63A3A',
+    name: 'Canal 3 Novelas',
+    badge: 'NOVELAS',
+    color: '#B5487A',
     schedule: fill([
-      { title: 'Imagen Televisión', start: '22:00', end: '00:00' },
-      { title: 'Imagen Televisión', start: '00:00', end: '02:00' },
+      { title: 'Amor en la ciudad', start: '22:00', end: '00:00' },
+      { title: 'Corazones cruzados', start: '00:00', end: '02:00' },
     ]),
   },
   {
-    id: 'foro',
+    id: 'canal-4',
     number: 4,
-    name: 'Foro',
-    badge: 'FORO',
+    name: 'Canal 4 Cine',
+    badge: 'CINE',
     color: '#C81E2B',
     schedule: fill([
-      { title: 'Es la hora de opinar', start: '22:00', end: '23:30' }, // muestra
-      { title: 'Las noticias', start: '23:30', end: '00:00' },
-      { title: 'CV directo', start: '00:00', end: '00:30' },
-      { title: 'Inova', start: '00:30', end: '01:00' },
-      { title: 'Historias de la ciudad', start: '01:00', end: '02:00' }, // título completo: muestra
+      { title: 'Función estelar', start: '22:00', end: '23:30' },
+      { title: 'Cortometrajes', start: '23:30', end: '00:00' },
+      { title: 'Cine clásico', start: '00:00', end: '00:30' },
+      { title: 'Cine clásico', start: '00:30', end: '01:00' },
+      { title: 'Trasnoche de película', start: '01:00', end: '02:00' },
     ]),
   },
   {
     id: 'canal-5',
     number: 5,
-    name: 'Canal 5',
-    badge: 'CANAL 5',
-    color: '#3A8F5C',
+    name: 'Canal 5 Infantil',
+    badge: 'INFANTIL',
+    color: '#D9A21B',
     schedule: fill([
-      { title: 'Cine de noche', start: '22:00', end: '23:30' }, // muestra
-      { title: 'Contacto deportivo', start: '23:30', end: '00:00' },
-      { title: 'Inova', start: '00:00', end: '00:30' },
-      { title: 'Inova', start: '00:30', end: '01:00' },
-      { title: 'México mágico', start: '01:00', end: '01:30' }, // título completo: muestra
+      { title: 'Aventuras animadas', start: '22:00', end: '23:30' },
+      { title: 'Cuentos para dormir', start: '23:30', end: '00:00' },
+      { title: 'Dibujos clásicos', start: '00:00', end: '00:30' },
+      { title: 'Dibujos clásicos', start: '00:30', end: '01:00' },
+      { title: 'Pequeños exploradores', start: '01:00', end: '01:30' },
     ]),
   },
   {
     id: 'canal-6',
     number: 6,
-    name: 'Canal 6',
-    badge: 'CANAL 6',
-    color: '#D9A21B',
+    name: 'Canal 6 Música',
+    badge: 'MÚSICA',
+    color: '#7A5AC8',
     schedule: fill([
-      { title: 'Noticias 6', start: '22:00', end: '23:00' }, // muestra
-      { title: 'Es Show', start: '23:00', end: '00:00' },
-      { title: 'Buenas noches Don Fematt', start: '00:00', end: '01:00' },
-      { title: 'Cuando el amor llega', start: '01:00', end: '02:00' }, // título completo: muestra
+      { title: 'Conciertos en vivo', start: '22:00', end: '23:00' },
+      { title: 'Ranking musical', start: '23:00', end: '00:00' },
+      { title: 'Sesiones acústicas', start: '00:00', end: '01:00' },
+      { title: 'Videos de la noche', start: '01:00', end: '02:00' },
     ]),
   },
   {
-    id: 'azteca-7',
+    id: 'canal-7',
     number: 7,
-    name: 'Azteca 7',
-    badge: 'AZTECA 7',
+    name: 'Canal 7 Variedades',
+    badge: 'VARIEDADES',
     color: '#4C6EF5',
     schedule: fill([
-      { title: 'Lo mejor de la Liga', start: '22:00', end: '23:30' }, // muestra
-      { title: 'Travesuras de amor', start: '23:30', end: '00:30' },
-      { title: 'Inova', start: '00:30', end: '01:00' },
+      { title: 'Show de variedades', start: '22:00', end: '23:30' },
+      { title: 'Noche de concursos', start: '23:30', end: '00:30' },
+      { title: 'Programa pagado', start: '00:30', end: '01:00' },
     ]),
   },
   {
-    id: 'a-mas',
+    id: 'canal-8',
     number: 8,
-    name: 'a+',
-    badge: 'A+',
+    name: 'Canal 8 Cultura',
+    badge: 'CULTURA',
     color: '#2F6FD0',
     schedule: fill([
-      { title: 'Noticias a+', start: '22:00', end: '00:02' }, // muestra
-      { title: 'Inova', start: '00:02', end: '00:30' },
-      { title: 'Inova', start: '00:30', end: '01:00' },
+      { title: 'Arte y sociedad', start: '22:00', end: '00:02' },
+      { title: 'Programa pagado', start: '00:02', end: '00:30' },
+      { title: 'Programa pagado', start: '00:30', end: '01:00' },
     ]),
   },
   {
-    id: 'nueve',
+    id: 'canal-9',
     number: 9,
-    name: 'Nu9ve',
-    badge: 'NU9VE',
+    name: 'Canal 9 Documentales',
+    badge: 'DOCS',
     color: '#8C8C8C',
     schedule: fill([
-      { title: 'Cine Nu9ve', start: '22:00', end: '00:00' }, // muestra
-      { title: 'Crónicas', start: '00:00', end: '00:30' },
-      { title: 'Crónicas', start: '00:30', end: '01:00' },
+      { title: 'Planeta salvaje', start: '22:00', end: '00:00' },
+      { title: 'Historias reales', start: '00:00', end: '00:30' },
+      { title: 'Historias reales', start: '00:30', end: '01:00' },
     ]),
   },
   {
-    id: 'once',
-    number: 11,
-    name: 'Once',
-    badge: 'ONCE',
+    id: 'canal-10',
+    number: 10,
+    name: 'Canal 10 Series',
+    badge: 'SERIES',
     color: '#A8323E',
     schedule: fill([
-      { title: 'Once Noticias', start: '22:00', end: '00:02' }, // muestra
-      { title: 'Pandora y el holandés errante', start: '00:02', end: '02:00' },
+      { title: 'Maratón de series', start: '22:00', end: '00:02' },
+      { title: 'Misterio en la costa', start: '00:02', end: '02:00' },
     ]),
   },
-  // Canales de muestra para demostrar el desplazamiento del catálogo.
   {
-    id: 'canal-14',
-    number: 14,
-    name: 'Canal 14',
-    badge: 'CANAL 14',
+    id: 'canal-11',
+    number: 11,
+    name: 'Canal 11 Comedia',
+    badge: 'COMEDIA',
     color: '#5A8F3A',
     schedule: fill([
-      { title: 'Documentales', start: '22:00', end: '00:00' },
-      { title: 'Conversatorio', start: '00:00', end: '01:00' },
+      { title: 'Noche de risas', start: '22:00', end: '00:00' },
+      { title: 'Stand-up', start: '00:00', end: '01:00' },
     ]),
   },
   {
-    id: 'canal-22',
-    number: 22,
-    name: 'Canal 22',
-    badge: 'CANAL 22',
-    color: '#B5487A',
+    id: 'canal-12',
+    number: 12,
+    name: 'Canal 12 Hogar',
+    badge: 'HOGAR',
+    color: '#D63A3A',
     schedule: fill([
-      { title: 'Noches de jazz', start: '22:00', end: '00:00' },
-      { title: 'Cine de arte', start: '00:00', end: '02:00' },
+      { title: 'Cocina fácil', start: '22:00', end: '00:00' },
+      { title: 'Viajes y destinos', start: '00:00', end: '02:00' },
     ]),
   },
 ]

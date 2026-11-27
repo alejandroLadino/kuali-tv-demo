@@ -53,7 +53,7 @@ vuelve al inicio.
 | --- | --- |
 | Canales, números, programación, logotipos y video por canal | `src/data/channels.ts` |
 | Colores, logotipo de la marca, video de demostración, hora/fecha del demo, mostrar login | `src/config/brand.ts` |
-| Logotipos de canales | `public/logos/` y el campo `logo` de cada canal, p. ej. `` `${import.meta.env.BASE_URL}logos/azteca-uno.png` `` |
+| Logotipos de canales | `public/logos/` y el campo `logo` de cada canal, p. ej. `` `${import.meta.env.BASE_URL}logos/canal-1.png` `` |
 | Logotipo de KualiDigital | `public/brand/kualidigital-logo.png` |
 | Video | `public/video/` y `brand.demoVideo` (o `video` en un canal) |
 | Estilos | `src/index.css` |
@@ -79,6 +79,6 @@ como en las capturas), así el demo se ve igual a cualquier hora de la presentac
 - **Tipografía**: fuente del sistema (SF Pro en iPhone/Mac; la equivalente en otros equipos).
 - **Iconos** de pestañas, login y reproductor: dibujados para el demo imitando las capturas.
 - **Reproductor horizontal y controles sobre el video**: las capturas no los muestran; diseño propuesto.
-- **Programación**: lo visible en las capturas (11:00 pm–1:00 am) más datos de muestra; los canales 14 y 22 son de muestra.
+- **Canales y programación**: nombres genéricos (*Canal 1 Noticias*, *Canal 2 Deportes*…) y programas de muestra, sin marcas ni títulos reales.
 - **Selector de fecha de la Guía**: solo hay un día de muestra; no se despliega.
 - **Ajustes → SAP** y **Política de privacidad**: solo presencia visual.

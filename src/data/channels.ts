@@ -67,6 +67,7 @@ export const channels: Channel[] = [
     name: 'Canal 1 Noticias',
     badge: 'NOTICIAS',
     color: '#2E7BD6',
+    photo: `${fotos}canal-1.jpg`,
     schedule: fill([
       { title: 'Noticiero estelar', start: '22:00', end: '23:30' },
       { title: 'Análisis de la noche', start: '23:30', end: '00:30' },
@@ -120,6 +121,7 @@ export const channels: Channel[] = [
     name: 'Canal 5 Infantil',
     badge: 'INFANTIL',
     color: '#D9A21B',
+    photo: `${fotos}canal-5.jpg`,
     schedule: fill([
       { title: 'Aventuras animadas', start: '22:00', end: '23:30' },
       { title: 'Cuentos para dormir', start: '23:30', end: '00:00' },
@@ -148,6 +150,7 @@ export const channels: Channel[] = [
     name: 'Canal 7 Variedades',
     badge: 'VARIEDADES',
     color: '#4C6EF5',
+    photo: `${fotos}canal-7.jpg`,
     schedule: fill([
       { title: 'Show de variedades', start: '22:00', end: '23:30' },
       { title: 'Noche de concursos', start: '23:30', end: '00:30' },

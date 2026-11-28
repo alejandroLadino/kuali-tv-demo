@@ -69,7 +69,7 @@ input { font: inherit; color: inherit; background: none; border: 0; outline: non
 /* Distintivo provisional de canal (sustituir por logotipos originales) */
 .ch-badge { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 22%; background: linear-gradient(150deg, color-mix(in srgb, var(--ch) 85%, #fff) 0%, var(--ch) 55%, color-mix(in srgb, var(--ch) 70%, #000) 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); line-height: 1; overflow: hidden; }
 .ch-badge-num { font-weight: 800; letter-spacing: -1px; }
-.ch-badge-name { font-weight: 700; letter-spacing: .2px; margin-top: 2px; max-width: 92%; white-space: nowrap; overflow: hidden; text-overflow: clip; opacity: .92; }
+.ch-badge-name { font-weight: 700; letter-spacing: 0; margin-top: 2px; max-width: 92%; white-space: nowrap; overflow: hidden; text-overflow: clip; opacity: .92; }
 .ch-logo-img { flex: none; object-fit: contain; }
 
 /* ===== Video ===== */

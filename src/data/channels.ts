@@ -171,7 +171,7 @@ export const channels: Channel[] = [
     id: 'canal-9',
     number: 9,
     name: 'Canal 9 Documentales',
-    badge: 'DOCS',
+    badge: 'DOCUMENTALES',
     color: '#8C8C8C',
     photo: `${fotos}canal-9.jpg`,
     schedule: fill([

@@ -27,7 +27,7 @@ export function ChannelLogo({ channel, size = 54 }: { channel: Channel; size?: n
       <span className="ch-badge-num" style={{ fontSize: size * 0.46 }}>
         {channel.number}
       </span>
-      <span className="ch-badge-name" style={{ fontSize: Math.max(6, size * 0.13 * Math.min(1, 9 / channel.badge.length)) }}>
+      <span className="ch-badge-name" style={{ fontSize: Math.min(size * 0.13, (size * 0.86) / (channel.badge.length * 0.76)) }}>
         {channel.badge}
       </span>
     </div>

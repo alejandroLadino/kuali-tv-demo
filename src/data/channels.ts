@@ -79,6 +79,7 @@ export const channels: Channel[] = [
     name: 'Canal 2 Deportes',
     badge: 'DEPORTES',
     color: '#3A8F5C',
+    photo: `${fotos}canal-2.jpg`,
     schedule: fill([
       { title: 'Fútbol en vivo', start: '22:00', end: '23:00' },
       { title: 'Zona deportiva', start: '23:00', end: '00:00' },
@@ -92,6 +93,7 @@ export const channels: Channel[] = [
     name: 'Canal 3 Novelas',
     badge: 'NOVELAS',
     color: '#B5487A',
+    photo: `${fotos}canal-3.jpg`,
     schedule: fill([
       { title: 'Amor en la ciudad', start: '22:00', end: '00:00' },
       { title: 'Corazones cruzados', start: '00:00', end: '02:00' },
@@ -103,6 +105,7 @@ export const channels: Channel[] = [
     name: 'Canal 4 Cine',
     badge: 'CINE',
     color: '#C81E2B',
+    photo: `${fotos}canal-4.jpg`,
     schedule: fill([
       { title: 'Función estelar', start: '22:00', end: '23:30' },
       { title: 'Cortometrajes', start: '23:30', end: '00:00' },
@@ -131,6 +134,7 @@ export const channels: Channel[] = [
     name: 'Canal 6 Música',
     badge: 'MÚSICA',
     color: '#7A5AC8',
+    photo: `${fotos}canal-6.jpg`,
     schedule: fill([
       { title: 'Conciertos en vivo', start: '22:00', end: '23:00' },
       { title: 'Ranking musical', start: '23:00', end: '00:00' },
@@ -156,6 +160,7 @@ export const channels: Channel[] = [
     name: 'Canal 8 Cultura',
     badge: 'CULTURA',
     color: '#2F6FD0',
+    photo: `${fotos}canal-8.jpg`,
     schedule: fill([
       { title: 'Arte y sociedad', start: '22:00', end: '00:02' },
       { title: 'Programa pagado', start: '00:02', end: '00:30' },
@@ -168,6 +173,7 @@ export const channels: Channel[] = [
     name: 'Canal 9 Documentales',
     badge: 'DOCS',
     color: '#8C8C8C',
+    photo: `${fotos}canal-9.jpg`,
     schedule: fill([
       { title: 'Planeta salvaje', start: '22:00', end: '00:00' },
       { title: 'Historias reales', start: '00:00', end: '00:30' },
@@ -180,6 +186,7 @@ export const channels: Channel[] = [
     name: 'Canal 10 Series',
     badge: 'SERIES',
     color: '#A8323E',
+    photo: `${fotos}canal-10.jpg`,
     schedule: fill([
       { title: 'Maratón de series', start: '22:00', end: '00:02' },
       { title: 'Misterio en la costa', start: '00:02', end: '02:00' },
@@ -191,6 +198,7 @@ export const channels: Channel[] = [
     name: 'Canal 11 Comedia',
     badge: 'COMEDIA',
     color: '#5A8F3A',
+    photo: `${fotos}canal-11.jpg`,
     schedule: fill([
       { title: 'Noche de risas', start: '22:00', end: '00:00' },
       { title: 'Stand-up', start: '00:00', end: '01:00' },

@@ -55,13 +55,15 @@ vuelve al inicio.
 | Colores, logotipo de la marca, video de demostración, hora/fecha del demo, mostrar login | `src/config/brand.ts` |
 | Logotipos de canales | `public/logos/` y el campo `logo` de cada canal, p. ej. `` `${import.meta.env.BASE_URL}logos/canal-1.png` `` |
 | Logotipo de KualiDigital | `public/brand/kualidigital-logo.png` |
+| Fotos de fondo por canal | `public/fotos/canal-N.jpg` y el campo `photo` del canal |
 | Video | `public/video/` y `brand.demoVideo` (o `video` en un canal) |
 | Estilos | `src/index.css` |
 
 ### Video
 
 - Sin video configurado, cada canal muestra una **vista previa animada** con su programa
-  y el rótulo «Reproducción simulada».
+  y el rótulo «Reproducción simulada». Si el canal tiene `photo`, la vista previa usa esa foto
+  de fondo (fotos libres de Unsplash/Pexels, recortadas a 1280×720).
 - Con `brand.demoVideo` (un MP4 H.264 autorizado), todos los canales lo reproducen
   y se rotula «Video de demostración». Inicia en silencio (requisito de los navegadores);
   aparece el botón de sonido en los controles.

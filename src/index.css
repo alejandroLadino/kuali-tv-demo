@@ -93,6 +93,11 @@ input { font: inherit; color: inherit; background: none; border: 0; outline: non
 .sim-lower { position: absolute; left: 50%; bottom: 7cqh; transform: translateX(-50%); display: flex; align-items: center; gap: 2cqw; padding: 1.4cqh 2.5cqw; border-radius: 1.5cqh; background: rgba(0,0,0,.45); font-size: 4.6cqh; font-weight: 600; white-space: nowrap; }
 .sim-live { color: #fff; background: #e0262b; border-radius: .8cqh; padding: .3cqh 1.2cqw; font-weight: 800; font-size: 4cqh; }
 .sim-paused .sim-bg { animation-play-state: paused; filter: grayscale(.35) brightness(.8); }
+/* Con foto: imagen de fondo con acercamiento lento, oscurecida para leer el título */
+.sim-photo .sim-bg { inset: 0; background-color: #000; background-position: center; background-size: cover; background-repeat: no-repeat; animation: kenburns 18s ease-in-out infinite alternate; }
+.sim-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,.6) 100%); }
+.sim-photo .sim-scan { opacity: .5; }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.1) translate(-2%, 1%); } }
 @keyframes drift { from { transform: translate(-4%, -3%) scale(1); } to { transform: translate(4%, 3%) scale(1.08); } }
 
 /* Controles del reproductor */

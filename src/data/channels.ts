@@ -5,11 +5,15 @@
  *   marcas ni títulos reales. Todo es DATO DE MUESTRA.
  * - `logo`: ruta a la imagen original del canal en public/logos/. Mientras
  *   esté vacío se muestra un distintivo provisional con número y nombre.
+ * - `photo`: foto libre de derechos (Unsplash/Pexels) que se muestra de fondo
+ *   en la vista previa simulada. Sin foto se usa un fondo de color animado.
  * - `video`: video propio de ese canal (opcional). Si no hay, se usa
  *   brand.demoVideo y, si tampoco existe, la reproducción simulada.
  * - Horarios en formato 24 h. Las horas antes de las 12:00 se consideran
  *   de la madrugada siguiente (la guía cubre de 10:00 pm a 3:00 am).
  */
+
+const fotos = `${import.meta.env.BASE_URL}fotos/`
 
 export interface Program {
   title: string
@@ -26,6 +30,8 @@ export interface Channel {
   /** Color del distintivo provisional y de la vista previa simulada. */
   color: string
   logo?: string
+  /** Foto de fondo de la vista previa simulada (public/fotos/canal-N.jpg). */
+  photo?: string
   video?: string
   schedule: Program[]
 }
@@ -196,6 +202,7 @@ export const channels: Channel[] = [
     name: 'Canal 12 Hogar',
     badge: 'HOGAR',
     color: '#D63A3A',
+    photo: `${fotos}canal-12.jpg`,
     schedule: fill([
       { title: 'Cocina fácil', start: '22:00', end: '00:00' },
       { title: 'Viajes y destinos', start: '00:00', end: '02:00' },

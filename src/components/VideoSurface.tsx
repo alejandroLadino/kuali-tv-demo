@@ -52,11 +52,15 @@ export function VideoSurface({ channel, playing, muted, showTag = true }: Props)
           />
         ) : (
           <div
-            className={`sim ${playing ? '' : 'sim-paused'}`}
+            className={`sim ${channel.photo ? 'sim-photo' : ''} ${playing ? '' : 'sim-paused'}`}
             style={{ ['--ch' as string]: channel.color }}
             key={channel.id}
           >
-            <div className="sim-bg" />
+            <div
+              className="sim-bg"
+              style={channel.photo ? { backgroundImage: `url("${channel.photo}")` } : undefined}
+            />
+            {channel.photo && <div className="sim-shade" />}
             <div className="sim-scan" />
             <div className="sim-bug">{channel.badge}</div>
             <div className="sim-center">
